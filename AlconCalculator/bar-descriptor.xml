@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<qnx xmlns="http://www.qnx.com/schemas/application/1.0">
+    <!-- App info -->
+    <name>Alcon Calculator</name>
+    <description>A scientific graphing calculator.</description>
+    <author>ePeriod Software</author>
+    <id>com.eperiod.AlconCalculator</id>
+    
+    <!-- Version info -->
+    <versionNumber>0.0.4</versionNumber>
+    <buildId>1</buildId>
+    
+    <!-- Main window configuration -->
+    <initialWindow>
+        <autoOrients>true</autoOrients>
+        <systemChrome>none</systemChrome>
+    </initialWindow>
+
+    <!-- Icons and assets -->
+    <icon>
+        <image>icon_144.png</image>
+    </icon>
+
+    <asset path="assets">assets</asset>
+    
+    <!-- Locale support -->
+    <asset path="translations" dest="qm">
+        <include name="*.qm"/>
+    </asset>
+    <asset path="icon_144.png">icon_144.png</asset>
+
+    <!-- Permissions necessary -->
+    <permission system="true">run_native</permission>
+    <env var="LD_LIBRARY_PATH" value="app/native/lib:/usr/lib/qt4/lib"/>
+    
+    <!-- Configurations required -->
+    <configuration name="Device-Debug">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="arm/o.le-v7-g/AlconCalculator" entry="true" type="Qnx/Elf">AlconCalculator</asset>
+    </configuration>
+    <configuration name="Device-Release">
+       <entryPointType>Qnx/Cascades</entryPointType>
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="arm/o.le-v7/AlconCalculator.so" entry="true" type="Qnx/Elf">AlconCalculator.so</asset>
+    </configuration>
+    <configuration name="Device-Profile">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="arm-p/o.le-v7-g/AlconCalculator" entry="true" type="Qnx/Elf">AlconCalculator</asset>
+    </configuration>
+    <configuration name="Simulator-Debug">
+       <platformArchitecture>x86</platformArchitecture>
+       <asset path="x86/o-g/AlconCalculator" entry="true" type="Qnx/Elf">AlconCalculator</asset>
+    </configuration>
+</qnx>

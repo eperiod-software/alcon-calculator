@@ -1,0 +1,11 @@
+*.o
+AlconCalculator/.settings
+AlconCalculator/arm/*
+AlconCalculator/arm/o.le-v7/*
+AlconCalculator/arm/o.le-v7-g/*
+AlconCalculator/arm-p/o.le-v7-g/*
+AlconCalculator/x86/*
+AlconCalculator/x86/o.g/*
+AlconCalculator/assets/.assets.index
+AlconCalculator/assets/sounds/*.mp3
+AlconCalculator/config.pri
